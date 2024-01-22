@@ -11,5 +11,13 @@ public class Bicycle implements Go {
         this.name = name;
     }
 
-
+    @Override
+    public Boolean go(Integer distance, String area) {
+        if (Objects.equals(area, "SWAMP")) {
+            System.out.println("Велосипед не смог преодолеть дистанцию. Нельзя проехать по такой местности.");
+            return false;
+        }
+        System.out.println("Велосипед преодолел дистинцию.");
+        return true;
+    }
 }
